@@ -1047,6 +1047,8 @@ app.use('*', cors({
 }));
 
 // ── Health (no auth) ──
+app.get("/", (c) => c.json({ service: 'echo-title-scraper', status: 'operational' }));
+
 app.get('/health', async (c) => {
   const env = c.env;
   await ensureDB(env.DB);
