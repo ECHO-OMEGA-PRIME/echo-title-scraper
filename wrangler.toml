@@ -40,3 +40,7 @@ binding = "AI"
 
 [triggers]
 crons = ["0 4 * * *"]
+
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "echo_metrics"
