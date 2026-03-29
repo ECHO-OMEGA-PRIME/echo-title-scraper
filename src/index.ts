@@ -13,6 +13,8 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 
+const ALLOWED_ORIGINS = ['https://echo-ept.com','https://www.echo-ept.com','https://echo-op.com','https://profinishusa.com','https://bgat.echo-op.com'];
+
 // ─── Structured Logging ─────────────────────────────────────────────────────
 
 function log(level: 'info' | 'warn' | 'error', message: string, data?: Record<string, unknown>) {
@@ -1041,7 +1043,7 @@ app.onError((err, c) => {
 
 // CORS
 app.use('*', cors({
-  origin: '*',
+  origin: (o) => ALLOWED_ORIGINS.includes(o) ? o : ALLOWED_ORIGINS[0],
   allowMethods: ['GET', 'POST', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'X-Echo-API-Key'],
 }));
