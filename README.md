@@ -1,5 +1,19 @@
 # echo-title-scraper
 
+> ## ✅ TESTED AND TRANSFERRED
+> This repository has been consolidated to the canonical ECHO account.
+> - **New location**: https://github.com/echoomegaprime/echo-title-scraper
+> - **Destination commit**: `da35f6ac88ade88ee173d0696827db8d0f146ed2`
+> - **Cert Forge certificate**: `cert_e40dc0273c257b28053d8d5fcb228ae13df15f39` (`PRODUCTION_READY`)
+> - **GitHub App Suite**: manual receipt (blocked by build #29466) — see
+>   [`.echo/repo-health.md`](https://github.com/echoomegaprime/echo-title-scraper/blob/main/.echo/repo-health.md)
+>   in the new repository
+> - **Transfer date**: 2026-08-11
+> - **⚠️ Live deployment note**: the fixed code lives at the new location, but the *currently
+>   live* Cloudflare Worker (`echo-title-scraper.bmcii1976.workers.dev`) has **not** been
+>   redeployed with the security fix — see `SECURITY.md` in the new repository before assuming
+>   the live instance is patched.
+
 > Chain-of-title training data generator that scrapes Texas county deed records via ShadowGlass and produces ChatML JSONL for TitleHound AI model training.
 
 ## Overview
